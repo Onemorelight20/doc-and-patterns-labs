@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleted Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        Product Deleted
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name: {{ product.name }}</h5>
+                        <p class="card-text">The product has been successfully deleted.</p>
+                        <a href="{{ url_for('read_all_digital_products') }}" class="btn btn-primary">Back to Main Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

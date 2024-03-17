@@ -1,0 +1,136 @@
+/* styles.css */
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
+/* Container */
+.container {
+    padding-top: 20px;
+}
+
+/* Headings */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ff9900;
+    border-color: #ff9900;
+}
+
+.btn-primary:hover {
+    background-color: #ff8000;
+    border-color: #ff8000;
+}
+
+.btn-outline-primary {
+    color: #ff9900;
+    border-color: #ff9900;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ff9900;
+    border-color: #ff9900;
+    color: #fff;
+}
+
+/* Table */
+.table {
+    background-color: #fff;
+}
+
+.table th {
+    font-weight: bold;
+    background-color: #f3f3f3;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+}
+
+/* Active Pagination Link */
+.pagination .page-item.active .page-link {
+    background-color: #ff9900;
+    border-color: #ff9900;
+    color: #fff;
+}
+
+.amazon-header {
+    background-color: #232f3e;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Amazonish button styles */
+.amazon-button {
+    background-color: #ff9900;
+    border-color: #ff9900;
+    color: #fff;
+}
+
+.amazon-button:hover {
+    background-color: #ffba00;
+    border-color: #ffba00;
+    color: #fff;
+}
+
+/* styles.css */
+
+/* Amazonish table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Amazonish pagination styles */
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination .page-link {
+    color: #333;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ffa41b;
+    border-color: #ffa41b;
+    color: #fff;
+}
+
+.pagination .page-link:hover {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    color: #fff;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        Product Details
+                    </div>
+                    <div class="card-body">
+                        {% if message %}
+                            <div class="alert alert-success" role="alert">
+                                {{ message }}
+                            </div>
+                            <script>
+                                // Remove message from URL after 1 second
+                                setTimeout(function() {
+                                    history.replaceState({}, document.title, window.location.pathname);
+                                }, 1000);
+                            </script>
+                        {% endif %}
+                        <h5 class="card-title">Product Name: {{ product.name }}</h5>
+                        <p class="card-text">Product Description: {{ product.description }}</p>
+                        <p class="card-text">Price: ${{ product.price }}</p>
+                        <p class="card-text">Encryption Key: {{ product.encryption_key }}</p>
+                        <!-- Update button -->
+                        <a href="{{ url_for('update_digital_product', product_id=product.id) }}" class="btn btn-primary">Update</a>
+                        <!-- Delete button -->
+                        <form action="{{ url_for('delete_digital_product', product_id=product.id) }}" method="post" style="display: inline;">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                        <!-- Link to main page -->
+                        <a href="{{ url_for('read_all_digital_products') }}" class="btn btn-secondary">Back to Main Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
